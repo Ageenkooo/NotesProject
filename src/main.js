@@ -4,7 +4,7 @@ import Lable from './stories/lable/lable';
 import Form from './stories/form/form';
 import Input from './stories/input/input';
 import Button from './stories/button/button';
-import Div from './stories/two-col-layout/two-col-layout';
+import Div from './stories/div/div';
 import Item from './stories/item/item';
 import User from './stories/user/user';
 import Books from './stories/books/books';

@@ -3,32 +3,40 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import cn from 'classnames';
 
-const ButtonS = styled.button`
-  background: white ;
-  color: #461B93;
- &.primary{
-	 color : white;
-	 background : #461B93;
- };
- &.center{
-	 display: block;
-	 margin-left: auto;
-	 margin-right: auto ;
- };
-  font-size: 1.2em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #461B93;
-  border-radius: 3px;
-	cursor : pointer;
+const ButtonS= styled.a`
+color: #6C567B;
+background: white ;
+text-decoration: none;
+user-select: none;
+font-size: 1.2em;
+margin: 1em;
+padding: 0.25em 1em;
+border: 2px solid #6C567B;
+border-radius: 3px;
+cursor : pointer;
+&.small {
+  font-size: 0.8em;
+  padding: 0.25em 0.6em;
+}
+:hover {
+  color: white;
+  border:2px solid #6C567B;
+  background : #6C567B;
+ }
+:active {
+  background: #6C567B;
+  color: white;
+  border:1px solid #C06C84;
+ }
 `;
 
 class Button extends React.Component {
   render() {
-    return <ButtonS  className={cn( this.props.className)}
+    return <ButtonS type="button" className={cn( this.props.className)}
                       onClick = {this.props.onClick}
             >
-              hey
+              {this.props.children}
+
             </ButtonS>;
   }
 }

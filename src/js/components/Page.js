@@ -5,9 +5,10 @@ import Lable from '../../stories/lable/lable';
 import Form from '../../stories/form/form';
 import Input from '../../stories/input/input';
 import Button from '../../stories/button/button';
-import Div from '../../stories/two-col-layout/two-col-layout';
+import Div from '../../stories/div/div';
 import Item from '../../stories/item/item';
 import User from '../../stories/user/user';
+import TestComponent from '../../demo'
 
 const Page = () => (
   <div>
@@ -24,9 +25,8 @@ const Page = () => (
       <Lable>Your notes</Lable>
       <Notes/>
     </Div>
-    <Div className="right flex flex-center">
-        <Div><Input></Input></Div>
-        <Div><Lable className="notImportant"> here must be a date </Lable></Div>
+    <Div className="right ">
+        <TestComponent/>
     </Div>
   </Div>
   </div>

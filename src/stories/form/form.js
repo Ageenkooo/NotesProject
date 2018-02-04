@@ -15,9 +15,8 @@ const FormS = styled.form`
 `;
 const Form = ({children, className, onClick})=>(
 	<FormS  className={cn( className)}
-		onClick = {onClick}
-	>
-	{children}
+					onClick = {onClick}>
+					{children}
 	</FormS>
 );
 

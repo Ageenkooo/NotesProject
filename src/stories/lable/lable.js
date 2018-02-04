@@ -8,25 +8,20 @@ const LableS = styled.p`
 		text-align : center;
 		width : 100%;
 	}
-  &.property {
-		color : #8253D7;
-		font-size : 1em;
+  &.medium {
+		color : #6C567B;
+		font-size : 0.9em;
 	}
-	&.notImportant{
-		font-size : 0.8em;
-		color: #CABBE9;
-		padding: 1em;
-	}
-  color : #430F58;
+  color : #6C567B;
 	font-size : 1.5em;
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-weight : 500;
 `;
+
 const Lable = ({children, className, onClick})=>(
 	<LableS  className={cn( className)}
-		onClick = {onClick}
-	>
-	{children}
+					onClick = {onClick}>
+					{children}
 	</LableS>
 );
 

@@ -11,43 +11,34 @@ const LableS = styled.p`
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-weight : 500;
 `;
-const ImgS = styled.img`
-  &.notepad{
-		background-image : url(${notepad});
-	}
-	&.book{
-		background-image : url(${book});
-	}
-	width : 30px;
-	height : 30px;
-	margin : 10px;
-	background-repeat : no-repeat;
-	background-size : 100% 100%;
-`;
 const Div = styled.div`
+	cursor: pointer;
 	&.chosen{
-		background-color :#E1FFCF;
+		background-color : #FAFCDB;
+    border-bottom: 2px solid  #CABBE9 !important;
 	}
 	&.left{
 		width : 100%;
 	}
 	&.color{
-		background-color : #D5DEF5;
+		border : 1px solid #FAFCDB;
 		border-top-right-radius:5px;
 		border-bottom-right-radius:5px;
 	}
+	padding: 0em 1em;
 	width : 220px;
 	display : flex;
 	flex-direction : row;
-	justify-content : left;
+	justify-content : space-between;
 `;
 
 class Item extends React.Component{
 	render(){
-		return <Div className={this.props.className}>
-			<LableS  className={this.props.className} onClick = {this.props.onClick} >
+		return <Div className={this.props.className} onClick = {this.props.onClick}>
+			<LableS  className={this.props.className} onDoubleClick={this.props.onDoubleClick}  >
 				{this.props.name}
 			</LableS>
+			{this.props.children}
 		</Div>
 	}
 }

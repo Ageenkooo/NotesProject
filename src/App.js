@@ -13,9 +13,9 @@ class App extends Component {
       <Form className="center">
         <Lable className="center">Sign in</Lable>
         <br/>
-        <Lable className="center property">Your e-mail</Lable>
-        <Input className="center"/>
-        <Lable  className="center property">Password</Lable>
+        <Lable className="center medium">Your e-mail</Lable>
+        <Input type="text" className="center"/>
+        <Lable  className="center medium">Password</Lable>
         <Input type="password" className="center"/>
         <br/>
         <Link exact to="/main">

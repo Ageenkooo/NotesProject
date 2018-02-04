@@ -4,34 +4,32 @@ import styled from 'styled-components';
 import cn from 'classnames';
 
 const InputS = styled.input`
-	:active, :hover, :focus {
-		outline: 0;
-		outline-offset: 0;
+	:active, :hover, :focus
+	{
+		outline: 0 !important;
+		outline-offset: 0 !important;
+		border-bottom: 2px solid #CABBE9 !important;
+		color: #CABBE9 !important;
 	}
-	&.center{
+	&.center
+	{
 		width : 180px;
 		display: block;
     margin-left: auto;
     margin-right: auto ;
 	}
-	&.disabled {
-		border-bottom: 2px solid #D5DEF5;
-		background: #EEEEEE;
-	}
-	width : 100px;
-  color: #461B93;
+	width : 150px;
+  color: #6C567B !important;
   font-size: 1em;
   padding: 0.5em 1em;
-  border-bottom: 2px solid #461B93;
+  border-bottom: 2px solid #6C567B !important;
 	border-top : 0px;
 	border-right : 0px;
 	border-left : 0px;
-  border-radius: 3px;
+  border-radius: 3px !important;
 `;
 
-
-const Input = ({className, onChange, disabled, type, placeholder, value, onKeyDown})=>(
-	<InputS className={cn( className)} type={type}
-		onChange = {onChange} placeholder={placeholder} disabled={disabled} value={value} onKeyDown={onKeyDown}/>
+const Input = ({className, onChange, type, placeholder, value, onKeyDown})=>(
+	<InputS className={cn( className)} type={type} onChange = {onChange} placeholder={placeholder} value={value} onKeyDown={onKeyDown}/>
 );
 export default Input;
