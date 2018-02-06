@@ -1,21 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import main from './main';
-import TestComponent from './demo';
+import LogIn from './login';
+import Registration from './registration';
+import Main from './main';
 import Books from './js/index';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<Lable> djsfsl</Lable>, document.getElementById('root'));
 ReactDOM.render(
         <BrowserRouter>
             <Switch>
-                <Route exact path="/main" component={Books} />
-                <Route exact path="/app" component={App} />
-                <Route exact path="/test" component={main} />
+                <Route exact path="/main" component={Main} />
+                <Route exact path="/app" component={Books} />
+                <Route exact path="/login" component={LogIn} />
+                <Route exact path="/registration" component={Registration} />
             </Switch>
         </BrowserRouter>,
         document.getElementById("root")
